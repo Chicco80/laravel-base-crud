@@ -87,7 +87,22 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $addData= $request->all();
+        $book = Product::findOrFail($id);
+        $addData = $request->all();
+
+        $book = new Product();
+        $book-> title = $addData['title'];     
+        $book-> description = $addData['description'];
+        $book-> series = $addData['series'];
+        $book-> thumb = $addData['thumb'];
+        $book-> price = $addData['price'];
+        $book-> sale_date = $addData['sale_date'];
+        $book-> type = $addData['type'];
+        $book-> save();
+        
+        return redirect()->route('products.show', $book->id);
+
     }
 
     /**
