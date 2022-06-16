@@ -21,10 +21,10 @@
                       <li class="list-group-item">{{$prodotto->type}}</li>
                       <li class="list-group-item">{{$prodotto->price}}</li>
                     </ul>
-                    {{-- <div class="card-body">
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div> --}}
+                     <div class="card-body">
+                    <a href="{{route('products.show',$prodotto->id)}}" class="btn btn-primary">Vai al Fumetto</a>
+                      
+                    </div>
                   </div>
             </div>
             @endforeach
@@ -34,5 +34,6 @@
         </div>
     </div>
 </main>
+
     
 @endsection
