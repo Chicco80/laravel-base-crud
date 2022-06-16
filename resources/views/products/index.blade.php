@@ -23,7 +23,7 @@
                     </ul> 
                      <div class="card-body">
                     <a href="{{route('products.show',$prodotto->id)}}" class="btn btn-primary">Vai al Fumetto</a>
-                    <a href="{{route('products.show',$prodotto->id)}}" class="btn btn-warning my-2">Modifica Fumetto</a>
+                    <a href="{{route('products.edit',$prodotto->id)}}" class="btn btn-warning my-2">Modifica Fumetto</a>
                       
                     </div>
                   </div>

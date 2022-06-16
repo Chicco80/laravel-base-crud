@@ -10,13 +10,13 @@
             @csrf
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" name="title" placeholder="Insert title">
+              <input type="text" class="form-control " id="title" name="title" placeholder="Insert title">
             </div>
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>
-              <textarea  id="description" name="description" cols="30" rows="10"></textarea>
+              <textarea  id="description" name="description" class="w-100" cols="10" rows="10"></textarea>
             </div>
-            <div class="mb-3 form-check">
+            <div class="mb-3">
             <label for="type" class="form-label">Select type</label>
             <select type="select" class="form-control" id="type" name="type">
                 <option value="comic book">comic book</option>
