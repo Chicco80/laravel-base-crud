@@ -6,7 +6,7 @@
 <main>
     <div class="container">
         <h1>Nuovo Prodotto</h1>
-        <form action="{{route('products.update')}}" method="post" >
+        <form action="{{route('products.update',$book->id)}}" method="post" >
             @csrf
             @method('PUT')
             <div class="mb-3">
