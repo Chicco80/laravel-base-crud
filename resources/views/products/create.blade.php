@@ -37,7 +37,7 @@
               </div>
               <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
-                <input type="number" class="form-control"min="0" max="1000" id="price" name="price">
+                <input type="number"min="0.01" max="999.99"class="form-control" id="price" name="price">
               </div>
 
             <button type="submit" class="btn btn-primary">Save</button>

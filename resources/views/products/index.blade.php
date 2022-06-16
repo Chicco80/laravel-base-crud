@@ -24,7 +24,11 @@
                      <div class="card-body">
                     <a href="{{route('products.show',$prodotto->id)}}" class="btn btn-primary">Vai al Fumetto</a>
                     <a href="{{route('products.edit',$prodotto->id)}}" class="btn btn-warning my-2">Modifica Fumetto</a>
-                      
+                      <form action="{{route('products.destroy', $prodotto->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Elimina Fumetto</button>
+                      </form>
                     </div>
                   </div>
             </div>
