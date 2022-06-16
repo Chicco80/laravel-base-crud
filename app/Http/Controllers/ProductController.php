@@ -36,7 +36,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $addData = $request->all();
+
+        $newComic = new Product();
+        $newComic-> title = $addData['title'];
+        if(!empty($addData['description'])){
+            $newComic-> description = $addData['description'];
+        }
+        $newComic-> series = $addData['series'];
+        $newComic-> thumb = $addData['thumb'];
+        $newComic-> price = $addData['price'];
+        $newComic-> sale_date = $addData['sale_date'];
+        $newComic-> type = $addData['type'];
+        $newComic-> save();
+        return redirect()->route('products.show', $newComic->id);
     }
 
     /**

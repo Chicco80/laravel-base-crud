@@ -14,7 +14,7 @@
                             <img src="{{$book->thumb}}" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">{{$book->title}}</h5>
-                              <p class="card-text">{{$book->description}}</p>
+                              <p class="card-text">{!!$book->description!!}</p>
                             </div>
                             <ul class="list-group list-group-flush">
                               <li class="list-group-item">{{$book->series}}</li>
