@@ -7,6 +7,13 @@ use App\Product;
 
 class ProductController extends Controller
 {
+        protected $validation =[
+            'title' => 'required|max:80',
+            'series' => 'required|max:50',
+            'thumb' => 'required|max:255',
+            'price' => 'required|max:11',
+            'sale_date' => 'required|max:20',
+        ];
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +42,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        $request->validate($this->validation);
         $addData = $request->all();
 
         $newComic = new Product();
@@ -86,7 +94,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {   
+        $request->validate($this->validation);
         $addData= $request->all();
         $book = Product::findOrFail($id);
         $addData = $request->all();

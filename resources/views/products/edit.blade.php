@@ -39,7 +39,7 @@
               </div>
               <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
-                <input type="number" class="form-control"min="0.01" max="999.99" id="price" name="price" value="{{$book->price}}">
+                <input type="number" class="form-control" min="0" max="10000" step=".01" id="price" name="price" value="{{$book->price}}">
               </div>
 
             <button type="submit" class="btn btn-primary">Modifica</button>
