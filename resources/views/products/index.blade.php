@@ -3,14 +3,14 @@
 @section('pageTitle', 'Prodotti')
 
 @section('mainContent')
-<main>
-    <div class="container">
+<main class="bg-secondary">
+    <div class="container ">
         <h1>Fumetti</h1>
         <div class="row">
 
             @foreach ($prodotti as $prodotto)
-            <div class="col">
-                <div class="card" style="width: 18rem;" class="">
+            <div class="col gy-3 ">
+                <div class="card h-100 " style="width: 18rem;">
                     <img src="{{$prodotto->thumb}}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">{{$prodotto->title}}</h5>
